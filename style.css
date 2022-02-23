@@ -1,464 +1,349 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" crossorigin="anonymous">
-{
- outline: none;
- box-sizing: border-box;
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-html {
- box-sizing: border-box;
- -webkit-font-smoothing: antialiased;
+:root {
+    --primary-color: #2a2a2a;
+    --secondary-color: #743e0d;
+    --white-color: white;
+    --green-color: #439c47;
+    --transition-animation: all .5s;
 }
-
-img {
- max-width: 100%;
-}
-
-$title-font: "Space Grotesk", sans-serif;
-$subtitle-font: "Inter", sans-serif;
-$italic-font: "Playfair Display", serif;
-$blog-bg: #e9e6e4;
-$body-bg: #121418;
-$title-color: #121418;
-$subtitle-color: #161419;
-$border-color: #94918f;
 
 body {
- background-color: $body-bg;
- display: flex;
- font-family: $subtitle-font;
- justify-content: center;
- align-items: center;
- flex-direction: column;
- width: 100%;
- padding: 0 2em;
- font-weight: 400;
- height: 100vh;
-
- @media screen and (max-width: 768px) {
-  padding: 0;
- }
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    margin: 10px;
 }
 
-.blog {
- background-color: $blog-bg;
- max-width: 1350px;
- display: grid;
- height: 90vh;
- max-height: 800px;
- overflow: hidden;
- grid-template-columns: 15% 20% 35% 30%;
- grid-template-rows: 100%;
- width: 100%;
- padding: 40px 4px;
- position: relative;
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition-animation);
 
- @media screen and (max-width: 1030px) {
-  grid-template-columns: 20% 50% 30%;
- }
-
- @media screen and (max-width: 768px) {
-  grid-template-columns: 25% 75%;
-  width: 100%;
-  max-width: none;
- }
-
- @media screen and (max-width: 560px) {
-  grid-template-columns: 100%;
- }
-
- &-part {
-  padding: 0 20px;
-
-  &:not(:last-child) {
-   border-right: 1px solid $border-color;
-  }
- }
-
- &-menu {
-  font-size: 22px;
-  text-decoration: none;
-  color: $subtitle-color;
-  display: flex;
-  letter-spacing: -0.5px;
-  align-items: center;
-
-  @media screen and (max-width: 1260px) {
-   font-size: 1.6vw;
-  }
-
-  svg {
-   width: 22px;
-   margin-left: 4px;
-  }
-
-  & + & {
-   margin-top: 24px;
-  }
-
-  &.mention {
-   margin-top: auto;
-   font-size: 19px;
-
-   @media screen and (max-width: 1260px) {
-    font-size: 1.4vw;
-   }
-  }
-
-  &.subscribe {
-   margin-top: 8px;
-   font-size: 19px;
-   position: relative;
-
-   @media screen and (max-width: 1260px) {
-    font-size: 1.4vw;
-   }
-
-   &:before {
-    content: "";
-    width: 16px;
-    height: 16px;
-    background-color: $subtitle-color;
-    left: 0;
-    border-radius: 1px;
-    margin-right: 14px;
-   }
-  }
-  &.rounded {
-   &:before {
-    content: "";
-    border-radius: 50%;
-    width: 12px;
-    height: 12px;
-    background-color: $subtitle-color;
-    margin-right: 12px;
-   }
-  }
- }
-
- .is-menu {
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (max-width: 1030px) {
-   display: none;
-  }
- }
-
- &-big__title {
-  font-size: 132px;
-  font-family: $title-font;
-  font-weight: 700;
-  letter-spacing: -5px;
-  line-height: 1;
-  margin-bottom: 6px;
-
-  @media screen and (max-width: 1400px) {
-   font-size: 120px;
-  }
-
-  @media screen and (max-width: 1260px) {
-   font-size: 9vw;
-   letter-spacing: -2px;
-  }
-
-  @media screen and (max-width: 560px) {
-   font-size: 36px;
-   margin-bottom: 12px;
-  }
- }
-
- &-header {
-  display: flex;
-  flex-direction: column;
- }
-
- &-article {
-  padding: 0 20px;
-
-  img {
-   height: 260px;
-   max-height: 22vh;
-   width: 100%;
-   object-fit: cover;
-   filter: grayscale(1);
-  }
- }
+    &:hover,
+    &:visited,
+    &:focus {
+        color: var(--primary-color);
+    }
 }
 
-.page-number {
- display: flex;
- flex-direction: column;
- justify-content: flex-end;
- height: 100%;
- font-size: 72px;
- text-align: center;
- letter-spacing: -3px;
- font-weight: lighter;
- font-family: $title-font;
- border-right: 1px solid $border-color;
- white-space: nowrap;
-
- @media screen and (max-width: 1260px) {
-  font-size: 5vw;
- }
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
-.small-title {
- border-bottom: 1px solid $border-color;
- margin-bottom: 20px;
- padding-bottom: 20px;
 
- @media screen and (max-width: 560px) {
-  font-size: 14px;
-  position: absolute;
-  top: 10px;
-  right: 24px;
-  border-bottom: 0;
- }
+
+
+
+/***************************************************
+    Create A Dark/Light Mode Switch with CSS Variables
+    Source: https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
+***************************************************/
+[data-theme="dark"] {
+    --primary-color: white;
+    --secondary-color: var(--green-color);
+    --white-color: #2a2a2a;
+
+    .button a:hover,
+    .button a:focus,
+    .button a:active {
+        color: white;
+    }
 }
 
-.date {
- display: flex;
- justify-content: flex-end;
+/* Toggle switch styling */
+.dark_mode_container {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    .dark_mode_switch {
+        display: inline-block;
+        height: 34px;
+        // position: absolute;
+        // top: -125px;
+        // right: 0;
+        // top: ;
+        width: 60px;
+        max-width: 60px;
+        
+        input {
+            display: none;
+        }
+
+        input:checked+.slider {
+            background-color: var(--green-color);
+            
+            &:before {
+                transform: translateX(25px);
+            }
+        }
+    }
 }
 
-.blog-article {
- h2 {
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 1.2;
-  margin: 8px 0 8px;
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: var(--transition-animation);
 
-  span {
-   font-family: $italic-font;
-  }
- }
+    width: 60px;
+    
+    &:before {
+        background-color: var(--white-color);
+        bottom: 5px;
+        content: "";
+        height: 25px;
+        left: 5px;
+        position: absolute;
+        transition: var(--transition-animation);
+        width: 25px;
+    }
 
- p {
-  line-height: 1.5;
-  margin: 14px 0;
- }
-
- a {
-  color: $subtitle-color;
-  text-decoration: none;
-  font-size: 26px;
-  letter-spacing: -1px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: auto;
-  border-top: 1px solid $border-color;
-  padding-top: 14px;
-
-  svg {
-   width: 26px;
-   margin-right: 10px;
-  }
- }
+    &.round {
+        border-radius: 34px;
+        
+        &:before {
+            border-radius: 50%;
+        }
+    }
 }
 
-.blog-detail {
- display: flex;
- align-items: center;
- justify-content: space-between;
- font-size: 14px;
 
- span {
-  font-family: $italic-font;
- }
+
+
+
+/**************************************
+    Header of Paper
+**************************************/
+header {
+    text-align: center;
+    position: relative;
+
+    h1.news_paper_title {
+        margin: 0;
+
+        a {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 60px;
+            text-transform: uppercase;
+            display: inline-block;
+            line-height: 60px;
+            margin: 15px 0;
+            cursor: pointer;
+            color: var(--primary-color);
+            transition: var(--transition-animation);
+        
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
+    }
+    
+    .news_paper_location {
+        font-weight: 600;
+        border-bottom: 1px solid var(--primary-color);
+        border-top: 1px solid var(--primary-color);
+        padding: 10px 0 10px 0;
+        margin: 20px 0;
+    }
 }
 
-.blog-header-container {
- overflow-y: auto;
- overflow-x: hidden;
- height: 100%;
- display: flex;
- flex-direction: column;
- scroll-snap-type: y mandatory;
- border-right: 1px solid $border-color;
-
- @media screen and (max-width: 768px) {
-  border-right: 0;
- }
-
- & > * {
-  flex-shrink: 0;
-  min-height: 100%;
-  scroll-snap-align: start;
- }
-
- .blog-article:not(.header-article) {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
- }
+@media only all and (max-width: 600px) {
+    header {
+        h1.news_paper_title a {
+            font-size: 40px;
+            line-height: 40px;
+            margin: 5px 0;
+        }
+    }
 }
 
-marquee {
- font-size: 20px;
- background-color: $body-bg;
- color: $blog-bg;
- padding: 6px 0;
- width: calc(100% + 44px);
- margin-left: -20px;
- flex-shrink: 0;
 
- span:before {
-  display: inline-block;
-  content: "";
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  position: relative;
-  top: -1px;
-  vertical-align: baseline;
-  background-color: $blog-bg;
-  margin: 0 16px;
- }
+
+
+/**************************************
+    Content Area of Newspaper
+**************************************/
+.headline {
+    text-align: center;
+    line-height: normal;
+    font-family: 'Playfair Display', serif;
+    display: block;
+    margin: 0 auto;
+    
+    h2.title {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 22px;
+        
+        &:hover {
+            color: var(--secondary-color);
+        }
+    }
+    
+    h3.writer {
+        font-weight: 700;
+        font-size: 12px;
+
+        &:hover {
+            color: var(--secondary-color);
+        }
+        
+        &:before {
+            border-top: 1px solid var(--primary-color);
+            content: '';
+            width: 100px;
+            height: 7px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        &:after {
+            border-bottom: 1px solid var(--primary-color);
+            content: '';
+            width: 100px;
+            height: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
 }
 
-.blog-right {
- overflow: auto;
- height: calc(100% + 60px);
- .rounded {
-  font-style: italic;
-  font-size: 18px;
-  &:before {
-   content: "";
-   border-radius: 50%;
-   width: 9px;
-   height: 9px;
-   background-color: rgb(22 20 25);
-   margin-right: 6px;
-  }
- }
+.button a {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 16px;
+    padding: 10px 15px;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: var(--green-color);
+        border: 1px solid var(--green-color);
+        color: var(--white-color);
+    }
 }
 
-.blog-right-title {
- font-size: 25px;
- font-family: $italic-font;
+
+
+
+
+/**************************************
+    Images & iframes
+**************************************/
+figure {
+    cursor: pointer;
+    margin: 0 0 20px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: var(--transition-animation);
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        font-style: italic;
+        font-size: 12px;
+        text-align: left;
+        transition: var(--transition-animation);
+
+        &:hover {
+            padding-left: 10px;
+        }
+    }
+    
+    &:hover {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+    }
 }
 
-.blog-right-title-container {
- display: flex;
- align-items: center;
- justify-content: space-between;
- border-bottom: 1px solid $border-color;
- margin-bottom: 20px;
- padding-bottom: 20px;
- margin-top: 100px;
- letter-spacing: -1px;
 
- @media screen and (max-width: 1400px) {
-  margin-top: 88px;
- }
 
- @media screen and (max-width: 1260px) {
-  margin-top: 6vw;
- }
 
- @media screen and (max-width: 1030px) {
-  margin-top: 5vw;
- }
+
+/***************************************************
+    Responsive Framework
+    https://codepen.io/HikwaMehluli/full/qeNOVv
+***************************************************/
+.the-grid-section {
+	max-width: 1500px;
+	margin: 0 auto;
+    width: 100%;
+    
+    .the-grid {
+        margin-bottom: 40px;
+        transition: all 0.5s;
+    
+        .the-grid-content {
+            // padding: 10px;
+            
+            p {
+            //https://medium.com/@elad/trimming-multi-lines-in-css-5ae59d5e6d84 
+                display: -webkit-box;   
+                -webkit-line-clamp: 5;   
+                -webkit-box-orient: vertical;     
+                overflow: hidden; 
+            }
+        }
+    }
 }
 
-.blog-title-date {
- display: flex;
- align-items: baseline;
- justify-content: space-between;
+/* the flexbox magic */
+@media screen and (min-width: 768px) {
+    .the-grid-section {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    .the-grid {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex: 0 1 calc(50% - .5em);
+            -ms-flex: 0 1 calc(50% - .5em);
+                flex: 0 1 calc(50% - .5em);
+    }
 }
 
-.blog-right-page {
- font-size: 56px;
- margin-bottom: 16px;
- font-family: $title-font;
-
- &-title {
-  font-family: $title-font;
-  font-size: 28px;
-  font-weight: 600;
-  max-width: 16ch;
-  letter-spacing: -2px;
- }
-
- &-subtitle {
-  max-width: 33ch;
-  font-size: 15px;
-  margin-top: 12px;
-  line-height: 1.4;
- }
+@media screen and (min-width: 1000px) {
+    .the-grid {
+        -webkit-flex: 0 1 calc(33% - 1em);
+            -ms-flex: 0 1 calc(33% - 1em);
+                flex: 0 1 calc(33% - 1em);
+    }
 }
 
-.blog-right-container + .blog-right-container {
- margin-top: 40px;
+@media screen and (min-width: 1500px) {
+    .the-grid {
+        -webkit-flex: 0 1 calc(25% - 1em);
+            -ms-flex: 0 1 calc(25% - 1em);
+                flex: 0 1 calc(25% - 1em);
+    }
 }
-
-.right-blog {
- display: flex;
- flex-direction: column;
-
- @media screen and (max-width: 768px) {
-  display: none;
- }
-
- .blog-menu {
-  @media screen and (max-width: 1030px) {
-   display: none;
-  }
- }
-}
-
-::-webkit-scrollbar {
- display: none;
-}
-
-.circle {
- width: 100%;
- aspect-ratio: 1/1;
- border-radius: 50%;
- background-color: $body-bg;
- display: flex;
- align-items: center;
- flex-direction: column;
- justify-content: center;
- color: $blog-bg;
- padding: 20px;
- text-align: center;
- margin-top: 40px;
-
- &-title {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  font-family: $title-font;
-
-  @media screen and (max-width: 1030px) {
-   display: none;
-  }
- }
-
- &-subtitle {
-  max-width: 30ch;
-  font-size: 14px;
-  line-height: 1.3;
-  margin-bottom: 16px;
- }
-
- &-footer {
-  font-family: $italic-font;
-  font-size: 30px;
- }
-}
-
-.blog-is-sticky {
- @media screen and (max-width: 560px) {
-  display: none;
- }
-}
-  </body>
-</html>
