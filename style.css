@@ -1,4 +1,3 @@
-<!DOCtype css>
 *,
 *:after,
 *:before {
@@ -18,20 +17,20 @@
 body {
     font-family: 'Crimson Text', serif;
     font-size: 16px;
-    color: var(#2a2a2a);
-    background-color: var(white);
+    color: var(--primary-color);
+    background-color: var(--white-color);
     margin: 10px;
 }
 
 a {
-    color: var(#2a2a2a);
+    color: var(--primary-color);
     text-decoration: none;
-    transition: var(all .5s);
+    transition: var(--transition-animation);
 
     &:hover,
     &:visited,
     &:focus {
-        color: var(#2a2a2a);
+        color: var(--primary-color);
     }
 }
 
@@ -52,7 +51,7 @@ p {
 ***************************************************/
 [data-theme="dark"] {
     --primary-color: white;
-    --secondary-color: var(#439c47);
+    --secondary-color: var(--green-color);
     --white-color: #2a2a2a;
 
     .button a:hover,
@@ -83,7 +82,7 @@ p {
         }
 
         input:checked+.slider {
-            background-color: var(#439c47);
+            background-color: var(--green-color);
             
             &:before {
                 transform: translateX(25px);
@@ -99,18 +98,18 @@ p {
     position: absolute;
     right: 0;
     top: 0;
-    transition: var(all .5s);
+    transition: var(--transition-animation);
 
     width: 60px;
     
     &:before {
-        background-color: var(white);
+        background-color: var(--white-color);
         bottom: 5px;
         content: "";
         height: 25px;
         left: 5px;
         position: absolute;
-        transition: var(all .5s);
+        transition: var(--transition-animation);
         width: 25px;
     }
 
@@ -146,19 +145,19 @@ header {
             line-height: 60px;
             margin: 15px 0;
             cursor: pointer;
-            color: var(#2a2a2a);
-            transition: var(all .5s);
+            color: var(--primary-color);
+            transition: var(--transition-animation);
         
             &:hover {
-                color: var(#743e0d);
+                color: var(--secondary-color);
             }
         }
     }
     
     .news_paper_location {
         font-weight: 600;
-        border-bottom: 1px solid var(#2a2a2a);
-        border-top: 1px solid var(#2a2a2a);
+        border-bottom: 1px solid var(--primary-color);
+        border-top: 1px solid var(--primary-color);
         padding: 10px 0 10px 0;
         margin: 20px 0;
     }
@@ -193,7 +192,7 @@ header {
         font-size: 22px;
         
         &:hover {
-            color: var(#743e0d);
+            color: var(--secondary-color);
         }
     }
     
@@ -202,11 +201,11 @@ header {
         font-size: 12px;
 
         &:hover {
-            color: var(#743e0d);
+            color: var(--secondary-color);
         }
         
         &:before {
-            border-top: 1px solid var(#2a2a2a);
+            border-top: 1px solid var(--primary-color);
             content: '';
             width: 100px;
             height: 7px;
@@ -215,7 +214,7 @@ header {
         }
         
         &:after {
-            border-bottom: 1px solid var(#2a2a2a);
+            border-bottom: 1px solid var(--primary-color);
             content: '';
             width: 100px;
             height: 10px;
@@ -228,17 +227,17 @@ header {
 .button a {
     display: inline-block;
     background: transparent;
-    border: 1px solid var(#2a2a2a);
-    color: var(#2a2a2a);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
     font-size: 16px;
     padding: 10px 15px;
 
     &:hover,
     &:focus,
     &:active {
-        background: var(#439c47);
-        border: 1px solid var(#439c47);
-        color: var(white);
+        background: var(--green-color);
+        border: 1px solid var(--green-color);
+        color: var(--white-color);
     }
 }
 
@@ -254,7 +253,7 @@ figure {
     margin: 0 0 20px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    transition: var(all .5s);
+    transition: var(--transition-animation);
 
     img {
         max-width: 100%;
@@ -265,7 +264,7 @@ figure {
         font-style: italic;
         font-size: 12px;
         text-align: left;
-        transition: var(all .5s);
+        transition: var(--transition-animation);
 
         &:hover {
             padding-left: 10px;
