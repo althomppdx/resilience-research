@@ -1,7 +1,8 @@
-// The Typetura script can be found at
-// https://github.com/Typetura/Typetura
-
-// The following is NOT the Typetura script. This is for the Typetura visualizer. Click on a headline to view it.
+/*!
+  * Bootstrap v4.3.1 (https://getbootstrap.com/)
+  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  */
 
 var cssTarget = ".primary-headline";
 
