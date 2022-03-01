@@ -522,7 +522,7 @@ footer small {
 }
 
 .primary-headline:hover:after {
-  content: 'Inspect style';
+  content: 'Click for more';
   position: absolute;
   font-family: var(--font-text);
   font-size: 0.7rem;
