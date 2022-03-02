@@ -372,9 +372,11 @@ nav {
   padding: 0;
   font-size: 1.2rem;
   font-variation-settings: 'wdth' 60;
+  color: #000000;
 }
 .links li {
   padding: 0 0.5rem;
+  color: #000000;
 }
 
 .header-img {
