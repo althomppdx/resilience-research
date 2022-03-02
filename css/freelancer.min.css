@@ -118,7 +118,7 @@ https://docs.typetura.com/
   display: block;
   height: 1rem;
   margin: 2rem 0 3rem;
-  background: url("pngegg.png"),
+  background: url("https://github.com/althomppdx/resilience-research/blob/a6503eca8103e6bc015aafd2749663aac5f3bb93/pngegg.png"),
     linear-gradient(hsl(0, 0%, 94%), hsl(0, 0%, 94%));
   background-repeat: no-repeat, repeat-x;
   background-size: contain, 2px 2px;
