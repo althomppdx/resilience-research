@@ -309,7 +309,7 @@ img {
 }
 
 a:is(:link, :visited) {
-  color: var(--color);
+  color: var(#000000);
 }
 
 .header {
